@@ -174,10 +174,14 @@
         .badge { 
             background: #fff; 
             color: #000; 
-            font-size: 11px; 
-            padding: 2px 6px; 
+            font-size: 10px;
             border-radius: 50%; 
             font-weight: 800; 
+            width: 18px;
+            height: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hamburger {
@@ -1143,10 +1147,6 @@
                 padding: 6px 12px;
                 font-size: 12px;
             }
-            .badge {
-                padding: 1px 4px;
-                font-size: 10px;
-            }
             
             .nav-links {
                 display: none;
@@ -1184,6 +1184,11 @@
                 align-items: flex-start;
                 gap: 15px;
             }
+            
+            .product-grid-header .btn-main {
+                width: auto;
+            }
+            
             .product-grid-header h2 {
                 font-size: 32px;
             }
@@ -1391,11 +1396,6 @@
             .cart-btn {
                 padding: 4px 8px;
                 font-size: 10px;
-            }
-            
-            .badge {
-                font-size: 9px;
-                padding: 1px 3px;
             }
             
             .hero h1 {
@@ -1899,8 +1899,7 @@
                 <h4>Social</h4>
                 <ul>
                     <li><a href="#" target="_blank">Instagram</a></li>
-                    <li><a href="#" target="_blank">Twitter</a></li>
-                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">Facebook</a></li>
                 </ul>
             </div>
         </div>
@@ -1924,10 +1923,6 @@
             const marqueeHeight = document.querySelector('.marquee-bar').offsetHeight;
             const nav = document.getElementById('navbar');
             nav.style.marginTop = marqueeHeight + 'px';
-            
-            // التأكد من عدم وجود سكرول أفقي
-            document.documentElement.style.overflowX = 'hidden';
-            document.body.style.overflowX = 'hidden';
         });
 
         window.onscroll = () => {
@@ -1969,7 +1964,7 @@
             });
         });
 
-        let cart = [];
+        let cart = JSON.parse(localStorage.getItem('dootechCart')) || [];
         let currentService = null;
         const sideCart = document.getElementById('sideCart');
         const serviceDetailsPanel = document.getElementById('serviceDetails');
@@ -2044,12 +2039,14 @@
 
         function addServiceToCartDirect(name, price) {
             cart.push({ name, price, type: 'service' });
+            localStorage.setItem('dootechCart', JSON.stringify(cart));
             updateCartUI();
             if(!sideCart.classList.contains('active')) toggleCart();
         }
 
         function removeFromCart(index) {
             cart.splice(index, 1);
+            localStorage.setItem('dootechCart', JSON.stringify(cart));
             updateCartUI();
         }
 
@@ -2138,6 +2135,7 @@
             window.open(whatsappURL, '_blank');
             
             cart = [];
+            localStorage.setItem('dootechCart', JSON.stringify(cart));
             updateCartUI();
             toggleCart();
         }
@@ -2194,13 +2192,8 @@
             if (window.innerWidth > 900 && mobileNav.classList.contains('active')) {
                 hamburgerInput.checked = false;
                 mobileNav.classList.remove('active');
-                document.body.style.overflow = 'auto';
+                updateBodyLock();
                 document.body.classList.remove('menu-open');
-            }
-            
-            // التأكد من عدم وجود سكرول أفقي
-            if (document.documentElement.scrollWidth > window.innerWidth) {
-                document.body.style.overflowX = 'hidden';
             }
         });
 
@@ -2242,14 +2235,9 @@
                     hoverImage.style.top = `${y}px`;
                 });
             });
-            
-            // التأكد من عدم وجود سكرول أفقي عند التحميل
-            setTimeout(() => {
-                if (document.documentElement.scrollWidth > window.innerWidth) {
-                    document.body.style.width = '100vw';
-                    document.body.style.overflowX = 'hidden';
-                }
-            }, 100);
+
+            // استرجاع وعرض عناصر السلة المحفوظة عند تحميل الصفحة
+            updateCartUI();
         });
     </script>
 </body>
