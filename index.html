@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kodo | Digital Agency</title>
+    <title>Kodo | Your Vision Our Creation</title>
     <meta name="description"
-        content="Kodo is a leading digital agency providing innovative web development, design, and marketing solutions.">
+        content="Kodo is a leading digital agency. Your Vision, Our Creation. We provide innovative web development, design, and marketing solutions.">
 
     <!-- Favicon & Theme -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%234e8074'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-size='60' font-family='Plus Jakarta Sans, sans-serif' fill='white' font-weight='bold'%3EK%3C/text%3E%3C/svg%3E">
-    <meta name="theme-color" content="#4e8074">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/icon-logo.png">
+    <meta name="theme-color" content="#6D5DF6">
 
     <!-- SEO & Keywords -->
     <meta name="keywords"
@@ -28,7 +27,7 @@
         :root {
             --bg: #fdfcfb;
             --text: #1a1a1a;
-            --accent: #4e8074;
+            --accent: #6D5DF6;
             --white: #ffffff;
             --transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -117,12 +116,11 @@
         }
 
         .logo {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: 5px;
-            text-transform: uppercase;
+            height: 30px;
+            width: auto;
             cursor: pointer;
             flex-shrink: 0;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -131,6 +129,7 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            margin-top: 8px;
         }
 
         .nav-links a {
@@ -923,7 +922,7 @@
         }
 
         .form-btn:hover {
-            background: #3a6359;
+            background: #594bd9;
             transform: translateY(-2px);
         }
 
@@ -948,12 +947,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 18vw;
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.03);
+            width: 70vw;
+            opacity: 0.05;
             pointer-events: none;
-            text-transform: uppercase;
-            letter-spacing: 15px;
+            user-select: none;
         }
 
         .footer-content {
@@ -1169,8 +1166,7 @@
             }
 
             .logo {
-                font-size: 20px;
-                letter-spacing: 3px;
+                height: 35px;
             }
 
             .cart-btn {
@@ -1363,8 +1359,7 @@
 
         @media screen and (max-width: 480px) {
             .logo {
-                font-size: 18px;
-                letter-spacing: 2px;
+                height: 30px;
             }
 
             .cart-btn {
@@ -1431,8 +1426,7 @@
 
         @media screen and (max-width: 380px) {
             .logo {
-                font-size: 16px;
-                letter-spacing: 1px;
+                height: 28px;
             }
 
             .cart-btn {
@@ -1476,7 +1470,7 @@
 
         @media screen and (max-width: 320px) {
             .logo {
-                font-size: 14px;
+                height: 24px;
             }
 
             .cart-btn span {
@@ -1528,14 +1522,14 @@
 
     <div class="marquee-bar">
         <div class="marquee-content">
-            <span class="marquee-text"><span>Kodo:</span> Innovating Digital Solutions</span>
-            <span class="marquee-text"><span>AGENCY:</span> Transforming Ideas into Reality</span>
-            <span class="marquee-text"><span>Kodo:</span> Innovating Digital Solutions</span>
-            <span class="marquee-text"><span>AGENCY:</span> Transforming Ideas into Reality</span>
-            <span class="marquee-text"><span>Kodo:</span> Innovating Digital Solutions</span>
-            <span class="marquee-text"><span>AGENCY:</span> Transforming Ideas into Reality</span>
-            <span class="marquee-text"><span>Kodo:</span> Innovating Digital Solutions</span>
-            <span class="marquee-text"><span>AGENCY:</span> Transforming Ideas into Reality</span>
+            <span class="marquee-text"><span>Kodo:</span> Your Vision, Our Creation</span>
+            <span class="marquee-text"><span>Kodo:</span> Elevating Digital Experiences</span>
+            <span class="marquee-text"><span>Kodo:</span> Your Vision, Our Creation</span>
+            <span class="marquee-text"><span>Kodo:</span> Elevating Digital Experiences</span>
+            <span class="marquee-text"><span>Kodo:</span> Your Vision, Our Creation</span>
+            <span class="marquee-text"><span>Kodo:</span> Elevating Digital Experiences</span>
+            <span class="marquee-text"><span>Kodo:</span> Your Vision, Our Creation</span>
+            <span class="marquee-text"><span>Kodo:</span> Elevating Digital Experiences</span>
         </div>
     </div>
 
@@ -1581,7 +1575,7 @@
     </div>
 
     <nav id="navbar">
-        <div class="logo">Kodo</div>
+        <img src="images/main-logo.png" alt="Kodo Logo" class="logo">
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#why-kodo">Why Kodo?</a>
@@ -1608,9 +1602,9 @@
 
     <!-- باقي المحتوى كما هو بدون تغيير -->
     <section class="hero" id="home">
-        <h1 data-aos="fade-up">Kodo Agency</h1>
+        <h1 data-aos="fade-up">Your Vision, Our Creation</h1>
         <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
-            We build digital products, brands, and experiences that drive business growth and innovation.
+            Welcome to Kodo Agency. We blend creativity with technology to build digital products, brands, and experiences that drive business growth and innovation.
         </p>
         <div class="hero-btns" data-aos="fade-up" data-aos-delay="200">
             <a href="#contact" class="btn-main btn-black hero-shop-btn">
@@ -1623,8 +1617,8 @@
 
     <section class="services-section" id="services">
         <div class="services-header" data-aos="fade-up">
-            <h2 class="services-title">Our Agency Services</h2>
-            <p class="services-subtitle">Comprehensive digital solutions tailored to your business needs</p>
+            <h2 class="services-title">Our Expertise</h2>
+            <p class="services-subtitle">Comprehensive digital solutions tailored to elevate your business.</p>
         </div>
         <div class="services-grid">
             <div class="service-card" data-aos="fade-up">
@@ -1643,7 +1637,7 @@
                     <div class="service-price">15,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('web-dev', 'Web Development', 15000, 'Full-stack web development services using the latest technologies.')">Details</button>
+                            onclick="showServiceDetails('web-dev', 'Web Development', 15000, 'Bespoke web solutions engineered for performance, scalability, and impact using the latest technologies.')">Details</button>
                         <button class="service-btn add" onclick="addServiceToCartDirect('Web Development', 15000)">Add
                             <i data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
@@ -1666,7 +1660,7 @@
                     <div class="service-price">12,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('ui-ux', 'UI/UX Design', 12000, 'Creating intuitive and engaging user experiences.')">Details</button>
+                            onclick="showServiceDetails('ui-ux', 'UI/UX Design', 12000, 'Immersive user experiences and intuitive interfaces designed to captivate your audience and drive conversions.')">Details</button>
                         <button class="service-btn add" onclick="addServiceToCartDirect('UI/UX Design', 12000)">Add <i
                                 data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
@@ -1689,7 +1683,7 @@
                     <div class="service-price">20,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('mobile-apps', 'Mobile Apps', 20000, 'High-performance mobile applications for your business.')">Details</button>
+                            onclick="showServiceDetails('mobile-apps', 'Mobile Apps', 20000, 'High-performance native and cross-platform mobile applications tailored to your business goals.')">Details</button>
                         <button class="service-btn add" onclick="addServiceToCartDirect('Mobile Apps', 20000)">Add <i
                                 data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
@@ -1712,7 +1706,7 @@
                     <div class="service-price">8,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('digital-marketing', 'Digital Marketing', 8000, 'Boost your online presence and reach more customers.')">Details</button>
+                            onclick="showServiceDetails('digital-marketing', 'Digital Marketing', 8000, 'Data-driven marketing strategies designed to boost your online presence and maximize ROI.')">Details</button>
                         <button class="service-btn add" onclick="addServiceToCartDirect('Digital Marketing', 8000)">Add
                             <i data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
@@ -1735,7 +1729,7 @@
                     <div class="service-price">6,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('seo', 'SEO Optimization', 6000, 'Improve your search engine rankings and drive traffic.')">Details</button>
+                            onclick="showServiceDetails('seo', 'SEO Optimization', 6000, 'Advanced SEO techniques to improve your search engine rankings and drive organic traffic.')">Details</button>
                         <button class="service-btn add" onclick="addServiceToCartDirect('SEO Optimization', 6000)">Add
                             <i data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
@@ -1758,7 +1752,7 @@
                     <div class="service-price">10,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('consulting', 'Consulting', 10000, 'Expert advice to help you navigate the digital landscape.')">Details</button>
+                            onclick="showServiceDetails('consulting', 'Consulting', 10000, 'Strategic expert advice to help you navigate the digital landscape and achieve operational excellence.')">Details</button>
                         <button class="service-btn add" onclick="addServiceToCartDirect('Consulting', 10000)">Add <i
                                 data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
@@ -1769,21 +1763,21 @@
 
     <section class="why-choose" id="why-kodo">
         <div class="why-header-top" data-aos="fade-up">
-            <h2>Why Choose Kodo?</h2>
+            <h2>Why Partner With Us?</h2>
         </div>
         <div class="why-flex">
             <div data-aos="fade-right">
                 <div class="feature-item"><span>01</span>
-                    <h4>Creative Excellence</h4>
+                    <h4>Visionary Design</h4>
                 </div>
                 <div class="feature-item"><span>02</span>
-                    <h4>Technical Expertise</h4>
+                    <h4>Technical Mastery</h4>
                 </div>
                 <div class="feature-item"><span>03</span>
-                    <h4>Data-Driven Strategies</h4>
+                    <h4>Strategic Insight</h4>
                 </div>
                 <div class="feature-item"><span>04</span>
-                    <h4>On-Time Delivery</h4>
+                    <h4>Unwavering Reliability</h4>
                 </div>
             </div>
             <img src="images/4630475.webp" data-aos="fade-left" alt="Why Choose Kodo">
@@ -1809,10 +1803,10 @@
 
     <section class="product-grid" id="work">
         <div class="product-grid-header" data-aos="fade-up">
-            <h2>Our Latest Projects</h2>
+            <h2>Selected Works</h2>
             <div style="display: flex; flex-direction: column; gap: 20px; align-items: flex-start;">
-                <p>Explore our portfolio of successful digital projects, from stunning websites to complex mobile
-                    applications.</p>
+                <p>Explore our portfolio of successful digital projects. From stunning websites to complex mobile
+                    applications, we deliver excellence.</p>
                 <a href="#contact" class="btn-main btn-black hero-shop-btn small">
                     <span>Get in Touch</span>
                     <div class="btn-arrow"><i data-lucide="arrow-right" size="16"></i></div>
@@ -1885,9 +1879,8 @@
     <section class="contact-section" id="contact">
         <div class="contact-container">
             <div class="contact-info" data-aos="fade-right">
-                <h2>Start Your Project</h2>
-                <p>Tell us about your vision and we'll help bring it to life with our expertise in digital technology
-                    and creative solutions.</p>
+                <h2>Let's Create Together</h2>
+                <p>Share your vision with us. We are ready to bring it to life with our blend of creative innovation and technical precision.</p>
 
                 <div class="services-checkbox">
                     <h4 style="margin-bottom: 20px; color: var(--accent);">Select Your Project Type:</h4>
@@ -1964,11 +1957,10 @@
     </section>
 
     <footer>
-        <div class="footer-bg-logo">Kodo</div>
+        <img src="images/wh-logo.png" alt="" class="footer-bg-logo">
         <div class="footer-content">
-            <div><span class="logo">Kodo</span>
-                <p style="opacity: 0.5; margin-top:20px;">Innovating for a better digital future. Your partner in
-                    success.</p>
+            <div><img src="images/wh-logo.png" alt="Kodo Logo" class="logo">
+                <p style="opacity: 0.5; margin-top:20px;">Your Vision, Our Creation. Innovating for a better digital future.</p>
             </div>
             <div class="footer-links">
                 <h4>Company</h4>
@@ -2175,20 +2167,20 @@
                     
                     <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text);">Features:</h4>
                     <ul style="color: #666; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
-                        <li>24/7 monitoring and support</li>
-                        <li>Personalized recommendations</li>
-                        <li>Real-time alerts and notifications</li>
-                        <li>Detailed analytics dashboard</li>
-                        <li>Mobile app integration</li>
+                        <li>Dedicated Project Management</li>
+                        <li>Quality Assurance & Testing</li>
+                        <li>Agile Development Process</li>
+                        <li>Timely Delivery</li>
+                        <li>Post-Launch Support</li>
                     </ul>
                     
                     <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text);">Benefits:</h4>
                     <ul style="color: #666; line-height: 1.6; padding-left: 20px;">
-                        <li>Improved health awareness</li>
-                        <li>Personalized wellness plans</li>
-                        <li>Early detection of potential issues</li>
-                        <li>Professional guidance and support</li>
-                        <li>Peace of mind</li>
+                        <li>Enhanced Brand Authority</li>
+                        <li>Increased User Engagement</li>
+                        <li>Scalable Digital Growth</li>
+                        <li>Competitive Advantage</li>
+                        <li>High Return on Investment</li>
                     </ul>
                 </div>
             `;
