@@ -22,6 +22,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <style>
         :root {
@@ -902,6 +904,17 @@
             color: var(--accent);
         }
 
+        .input-group .input[data-service-select] {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .input-group .input[data-service-select] option {
+            color: var(--text);
+            background: var(--white);
+            font-weight: 500;
+        }
+
         .input::placeholder {
             color: transparent;
         }
@@ -1535,9 +1548,9 @@
 
     <div class="mobile-nav" id="mobileNav">
         <a href="#home">Home</a>
+        <a href="#services">Services</a>
         <a href="#why-kodo">Why Kodo?</a>
         <a href="#work">Work</a>
-        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </div>
 
@@ -1578,9 +1591,9 @@
         <img src="images/kodo-03.png" alt="Kodo Logo" class="logo">
         <div class="nav-links">
             <a href="#home">Home</a>
+            <a href="#services">Services</a>
             <a href="#why-kodo">Why Kodo?</a>
             <a href="#work">Work</a>
-            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="nav-right">
@@ -1621,6 +1634,7 @@
             <p class="services-subtitle">Comprehensive digital solutions tailored to elevate your business.</p>
         </div>
         <div class="services-grid">
+            <!-- Service 1: Web Development -->
             <div class="service-card" data-aos="fade-up">
                 <div>
                     <div class="service-card-header">
@@ -1628,132 +1642,137 @@
                         <h3>Web Development</h3>
                     </div>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Custom Websites</li>
-                        <li><i data-lucide="check"></i> E-commerce Solutions</li>
-                        <li><i data-lucide="check"></i> CMS Integration</li>
+                        <li><i data-lucide="check"></i>Custom Websites</li>
+                        <li><i data-lucide="check"></i>E-commerce Solutions</li>
+                        <li><i data-lucide="check"></i>Platform Development</li>
                     </ul>
                 </div>
                 <div class="service-card-footer">
                     <div class="service-price">15,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('web-dev', 'Web Development', 15000, 'Bespoke web solutions engineered for performance, scalability, and impact using the latest technologies.')">Details</button>
+                            onclick="showServiceDetails('web-development', 'Web Development', 15000, 'We build high-performance, responsive, and scalable websites tailored to your brand. From corporate sites to complex e-commerce platforms, we deliver digital experiences that engage and convert.')">Details</button>
                         <button class="service-btn add" onclick="addServiceToCartDirect('Web Development', 15000)">Add
                             <i data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
                 </div>
             </div>
 
+            <!-- Service 2: Mobile Applications -->
             <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <div class="service-card-header">
-                        <div class="service-icon"><i data-lucide="palette"></i></div>
-                        <h3>UI/UX Design</h3>
+                        <div class="service-icon"><i data-lucide="smartphone"></i></div>
+                        <h3>Mobile Applications</h3>
                     </div>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> User Research</li>
-                        <li><i data-lucide="check"></i> Wireframing & Prototyping</li>
-                        <li><i data-lucide="check"></i> Visual Design</li>
+                        <li><i data-lucide="check"></i>iOS & Android Apps</li>
+                        <li><i data-lucide="check"></i>Cross-platform Dev</li>
+                        <li><i data-lucide="check"></i>App Maintenance</li>
                     </ul>
                 </div>
                 <div class="service-card-footer">
-                    <div class="service-price">12,000 EGP</div>
+                    <div class="service-price">25,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('ui-ux', 'UI/UX Design', 12000, 'Immersive user experiences and intuitive interfaces designed to captivate your audience and drive conversions.')">Details</button>
-                        <button class="service-btn add" onclick="addServiceToCartDirect('UI/UX Design', 12000)">Add <i
+                            onclick="showServiceDetails('mobile-applications', 'Mobile Applications', 25000, 'From concept to launch, we create intuitive and powerful mobile applications for iOS and Android. We focus on user-centric design and robust performance to put your business in your customers\\\' hands.')">Details</button>
+                        <button class="service-btn add" onclick="addServiceToCartDirect('Mobile Applications', 25000)">Add <i
                                 data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
                 </div>
             </div>
 
+            <!-- Service 3: Design & Branding -->
             <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <div class="service-card-header">
-                        <div class="service-icon"><i data-lucide="smartphone"></i></div>
-                        <h3>Mobile Apps</h3>
+                        <div class="service-icon"><i data-lucide="palette"></i></div>
+                        <h3>Design & Branding</h3>
                     </div>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> iOS & Android</li>
-                        <li><i data-lucide="check"></i> Cross-platform Dev</li>
-                        <li><i data-lucide="check"></i> App Store Optimization</li>
+                        <li><i data-lucide="check"></i>Brand Identity</li>
+                        <li><i data-lucide="check"></i>UI/UX Design</li>
+                        <li><i data-lucide="check"></i>Marketing Materials</li>
                     </ul>
                 </div>
                 <div class="service-card-footer">
-                    <div class="service-price">20,000 EGP</div>
+                    <div class="service-price">18,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('mobile-apps', 'Mobile Apps', 20000, 'High-performance native and cross-platform mobile applications tailored to your business goals.')">Details</button>
-                        <button class="service-btn add" onclick="addServiceToCartDirect('Mobile Apps', 20000)">Add <i
+                            onclick="showServiceDetails('design-branding', 'Design & Branding', 18000, 'We create compelling brand identities and intuitive user interfaces that tell your story. Our design process is collaborative, strategic, and focused on creating a lasting impact.')">Details</button>
+                        <button class="service-btn add" onclick="addServiceToCartDirect('Design & Branding', 18000)">Add <i
                                 data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
                 </div>
             </div>
 
+            <!-- Service 4: Social Media Marketing -->
             <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                 <div>
                     <div class="service-card-header">
                         <div class="service-icon"><i data-lucide="trending-up"></i></div>
-                        <h3>Digital Marketing</h3>
+                        <h3>Social Media Marketing</h3>
                     </div>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> SEO & SEM</li>
-                        <li><i data-lucide="check"></i> Social Media Management</li>
-                        <li><i data-lucide="check"></i> Content Strategy</li>
+                        <li><i data-lucide="check"></i>Content Strategy</li>
+                        <li><i data-lucide="check"></i>Community Management</li>
+                        <li><i data-lucide="check"></i>Paid Campaigns</li>
                     </ul>
                 </div>
                 <div class="service-card-footer">
                     <div class="service-price">8,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('digital-marketing', 'Digital Marketing', 8000, 'Data-driven marketing strategies designed to boost your online presence and maximize ROI.')">Details</button>
-                        <button class="service-btn add" onclick="addServiceToCartDirect('Digital Marketing', 8000)">Add
+                            onclick="showServiceDetails('social-media', 'Social Media Marketing', 8000, 'We elevate your brand on social media with data-driven strategies. We create engaging content, manage your community, and run targeted ad campaigns to grow your audience and drive results.')">Details</button>
+                        <button class="service-btn add" onclick="addServiceToCartDirect('Social Media Marketing', 8000)">Add
                             <i data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
                 </div>
             </div>
 
+            <!-- Service 5: Business Solutions -->
             <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                 <div>
                     <div class="service-card-header">
-                        <div class="service-icon"><i data-lucide="search"></i></div>
-                        <h3>SEO Optimization</h3>
+                        <div class="service-icon"><i data-lucide="briefcase"></i></div>
+                        <h3>Business Solutions</h3>
                     </div>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Keyword Research</li>
-                        <li><i data-lucide="check"></i> On-page Optimization</li>
-                        <li><i data-lucide="check"></i> Technical SEO</li>
+                        <li><i data-lucide="check"></i>CRM Systems</li>
+                        <li><i data-lucide="check"></i>Chatbot Integration</li>
+                        <li><i data-lucide="check"></i>Process Automation</li>
                     </ul>
                 </div>
                 <div class="service-card-footer">
-                    <div class="service-price">6,000 EGP</div>
+                    <div class="service-price">20,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('seo', 'SEO Optimization', 6000, 'Advanced SEO techniques to improve your search engine rankings and drive organic traffic.')">Details</button>
-                        <button class="service-btn add" onclick="addServiceToCartDirect('SEO Optimization', 6000)">Add
+                            onclick="showServiceDetails('business-solutions', 'Business Solutions', 20000, 'We streamline your operations with custom digital solutions. From CRM implementation to AI-powered chatbots, we build tools that boost productivity and enhance customer engagement.')">Details</button>
+                        <button class="service-btn add" onclick="addServiceToCartDirect('Business Solutions', 20000)">Add
                             <i data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
                 </div>
             </div>
 
+            <!-- Service 6: SEO & Digital Consulting -->
             <div class="service-card" data-aos="fade-up" data-aos-delay="500">
                 <div>
                     <div class="service-card-header">
-                        <div class="service-icon"><i data-lucide="briefcase"></i></div>
-                        <h3>Consulting</h3>
+                        <div class="service-icon"><i data-lucide="search"></i></div>
+                        <h3>SEO & Digital Consulting</h3>
                     </div>
                     <ul class="service-features">
-                        <li><i data-lucide="check"></i> Digital Strategy</li>
-                        <li><i data-lucide="check"></i> Tech Stack Advisory</li>
-                        <li><i data-lucide="check"></i> Process Optimization</li>
+                        <li><i data-lucide="check"></i>Technical SEO</li>
+                        <li><i data-lucide="check"></i>Keyword Strategy</li>
+                        <li><i data-lucide="check"></i>Digital Roadmap</li>
                     </ul>
                 </div>
                 <div class="service-card-footer">
                     <div class="service-price">10,000 EGP</div>
                     <div class="service-actions">
                         <button class="service-btn details"
-                            onclick="showServiceDetails('consulting', 'Consulting', 10000, 'Strategic expert advice to help you navigate the digital landscape and achieve operational excellence.')">Details</button>
-                        <button class="service-btn add" onclick="addServiceToCartDirect('Consulting', 10000)">Add <i
+                            onclick="showServiceDetails('seo-consulting', 'SEO & Digital Consulting', 10000, 'Boost your visibility and outrank the competition with our expert SEO services. We also provide strategic consulting to guide your digital transformation and ensure long-term growth.')">Details</button>
+                        <button class="service-btn add" onclick="addServiceToCartDirect('SEO & Digital Consulting', 10000)">Add <i
                                 data-lucide="shopping-bag" style="width:16px; height:16px;"></i></button>
                     </div>
                 </div>
@@ -1787,15 +1806,15 @@
     <section class="stats-section">
         <div class="stats-grid">
             <div class="stat-card" data-aos="fade-up">
-                <h3>10+</h3>
+                <h3>3+</h3>
                 <p>Years Experience</p>
             </div>
             <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                <h3>50+</h3>
+                <h3>15+</h3>
                 <p>Experts</p>
             </div>
             <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                <h3>500+</h3>
+                <h3>10+</h3>
                 <p>Clients</p>
             </div>
         </div>
@@ -1821,7 +1840,7 @@
         </div>
         <div class="card" style="background-image: url('images/4630475.webp')" data-aos="fade-up" data-aos-delay="200">
             <div class="card-overlay">
-                <h3>E-Commerce Platform</h3>
+                <h3>E-Commerce</h3>
             </div>
             <img src="images/Adel-Shakal.webp" class="card-hover-image" alt="View Project">
         </div>
@@ -1830,47 +1849,52 @@
     <section class="faq-section" id="faq">
         <div class="faq-header" data-aos="fade-up">
             <h2>Frequently Asked Questions</h2>
-            <p style="opacity: 0.7;">Everything you need to know about our agency and services.</p>
+            <p style="opacity: 0.7;">Answers to the most common inquiries about our services and methodology.</p>
         </div>
         <div class="faq-container">
             <div class="faq-item" data-aos="fade-up">
                 <div class="faq-question">
-                    <h3>What services do you offer?</h3>
+                    <h3>What is your workflow?</h3>
                     <i data-lucide="chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>We offer a wide range of digital services including web development, mobile app development,
-                        UI/UX design, digital marketing, and SEO optimization.</p>
+                    <p>Discovery, Design, Development, Testing, and Launch. We ensure quality at every step.</p>
                 </div>
             </div>
             <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
                 <div class="faq-question">
-                    <h3>Do you provide support after launch?</h3>
+                    <h3>How long do projects take?</h3>
                     <i data-lucide="chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes, we offer ongoing maintenance and support packages to ensure your digital product remains
-                        secure, up-to-date, and performs optimally.</p>
+                    <p>Websites typically take 4-6 weeks; apps take 3-6 months. Exact timing depends on scope.</p>
                 </div>
             </div>
             <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                 <div class="faq-question">
-                    <h3>What is your pricing model?</h3>
+                    <h3>How do we communicate?</h3>
                     <i data-lucide="chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Our pricing is project-based and depends on the scope and complexity of the work. We provide
-                        detailed quotes after an initial consultation.</p>
+                    <p>You get a dedicated project manager and real-time updates via a shared workspace.</p>
                 </div>
             </div>
             <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="faq-question">
-                    <h3>Do you develop for both iOS and Android?</h3>
+                    <h3>Do you offer support?</h3>
                     <i data-lucide="chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>Absolutely. We specialize in both native and cross-platform mobile app development for iOS and
-                        Android devices.</p>
+                    <p>Yes, we provide maintenance packages for security, updates, and performance monitoring.</p>
+                </div>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="faq-question">
+                    <h3>Can you work with our team?</h3>
+                    <i data-lucide="chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we collaborate seamlessly with your in-house teams and partners.</p>
                 </div>
             </div>
         </div>
@@ -1904,12 +1928,6 @@
                     </div>
                     <div class="checkbox-group">
                         <label class="checkbox-label">
-                            <input type="checkbox" class="checkbox-input" name="projectType" value="marketing">
-                            <span>Digital Marketing</span>
-                        </label>
-                    </div>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
                             <input type="checkbox" class="checkbox-input" name="projectType" value="seo">
                             <span>SEO</span>
                         </label>
@@ -1938,9 +1956,15 @@
                     </div>
 
                     <div class="input-group">
+                        <input required type="tel" name="mobile" autocomplete="off" class="input" id="mobileInput"
+                            placeholder=" ">
+                        <label class="user-label">Mobile Number</label>
+                    </div>
+
+                    <div class="input-group">
                         <input type="text" name="website" autocomplete="off" class="input" id="websiteInput"
                             placeholder=" ">
-                        <label class="user-label">Website <span class="optional">(Optional)</span></label>
+                        <label class="user-label">Website URL <span class="optional">(Optional)</span></label>
                     </div>
 
                     <div class="input-group">
@@ -1980,8 +2004,7 @@
             <div class="footer-links">
                 <h4>Social</h4>
                 <ul>
-                    <li><a href="#" target="_blank">Instagram</a></li>
-                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/kodo_eg?igsh=MW9rOTZldnNtNDBiMA==" target="_blank">Instagram</a></li>
                 </ul>
             </div>
         </div>
@@ -2154,38 +2177,81 @@
         }
 
         function showServiceDetails(id, title, price, description) {
-            currentService = { id, title, price, description };
+            currentService = { id, baseTitle: title, price, description };
 
             document.getElementById('serviceDetailsTitle').textContent = title;
             document.getElementById('serviceDetailsPrice').textContent = `${price.toLocaleString()} EGP`;
 
             const contentDiv = document.getElementById('serviceDetailsContent');
+            let dropdownHTML = '';
+
+            if (id === 'web-development') {
+                currentService.title = `${title} (Custom Development)`;
+                dropdownHTML = `
+                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text);">Select Platform:</h4>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <select id="service-option-select" class="input" data-service-select style="cursor:pointer;" onchange="updateServicePrice()">
+                            <option value="Custom Development" data-price="15000">Custom Development</option>
+                            <option value="WordPress" data-price="18000">WordPress</option>
+                            <option value="Shopify" data-price="22000">Shopify</option>
+                            <option value="Salla" data-price="20000">Salla</option>
+                        </select>
+                    </div>
+                `;
+            } else if (id === 'business-solutions') {
+                currentService.title = `${title} (CRM System)`;
+                dropdownHTML = `
+                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text);">Select Solution:</h4>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <select id="service-option-select" class="input" data-service-select style="cursor:pointer;" onchange="updateServicePrice()">
+                            <option value="CRM System" data-price="20000">CRM System</option>
+                            <option value="Chatbot Integration" data-price="16000">Chatbot Integration</option>
+                            <option value="Custom Business Tool" data-price="30000">Custom Business Tool</option>
+                        </select>
+                    </div>
+                `;
+            } else {
+                currentService.title = title;
+            }
+
             contentDiv.innerHTML = `
                 <div style="margin-bottom: 30px;">
                     <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--text);">Service Description</h3>
                     <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">${description}</p>
                     
-                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text);">Features:</h4>
+                    ${dropdownHTML}
+
+                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text);">What's Included:</h4>
                     <ul style="color: #666; line-height: 1.6; margin-bottom: 20px; padding-left: 20px;">
                         <li>Dedicated Project Management</li>
                         <li>Quality Assurance & Testing</li>
                         <li>Agile Development Process</li>
-                        <li>Timely Delivery</li>
                         <li>Post-Launch Support</li>
                     </ul>
                     
-                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text);">Benefits:</h4>
+                    <h4 style="font-size: 16px; margin-bottom: 10px; color: var(--text);">Key Benefits:</h4>
                     <ul style="color: #666; line-height: 1.6; padding-left: 20px;">
-                        <li>Enhanced Brand Authority</li>
-                        <li>Increased User Engagement</li>
                         <li>Scalable Digital Growth</li>
                         <li>Competitive Advantage</li>
-                        <li>High Return on Investment</li>
                     </ul>
                 </div>
             `;
 
             toggleServiceDetails();
+        }
+
+        function updateServicePrice() {
+            const select = document.getElementById('service-option-select');
+            if (!select || !currentService) return;
+
+            const selectedOption = select.options[select.selectedIndex];
+            const newPrice = parseInt(selectedOption.dataset.price, 10);
+            const optionName = selectedOption.value;
+
+            currentService.price = newPrice;
+            currentService.title = `${currentService.baseTitle} (${optionName})`;
+
+            document.getElementById('serviceDetailsPrice').textContent = `${newPrice.toLocaleString()} EGP`;
         }
 
         function addServiceToCart() {
@@ -2222,33 +2288,49 @@
             toggleCart();
         }
 
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
+
+            const submitBtn = this.querySelector('.form-btn');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
 
             const name = document.getElementById('nameInput').value;
             const email = document.getElementById('emailInput').value;
+            const mobile = document.getElementById('mobileInput').value;
             const website = document.getElementById('websiteInput').value;
             const projectDetails = document.getElementById('projectDetailsInput').value;
-
             const selectedProjects = [];
             document.querySelectorAll('input[name="projectType"]:checked').forEach(checkbox => {
                 selectedProjects.push(checkbox.nextElementSibling.textContent);
             });
 
-            showToast(`Request submitted! We'll contact you soon.`);
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                mobile_number: mobile,
+                website_url: website || 'Not provided',
+                project_details: projectDetails,
+                project_types: selectedProjects.length > 0 ? selectedProjects.join(', ') : 'None selected'
+            };
 
-            this.reset();
-
-            document.querySelectorAll('.input-group').forEach(group => {
-                const input = group.querySelector('.input');
-                const label = group.querySelector('.user-label');
-                label.style.transform = 'translateY(1rem)';
-                label.style.color = '#e8e8e8';
-            });
-
-            document.querySelectorAll('input[name="projectType"]').forEach(checkbox => {
-                checkbox.checked = false;
-            });
+            // Replace with your EmailJS Service ID and Template ID
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    showToast(`Request submitted! We'll contact you soon.`);
+                    e.target.reset(); // Reset the form fields
+                    // Manually reset floating labels to their initial state
+                    document.querySelectorAll('.input-group .user-label').forEach(label => {
+                        label.style.transform = 'translateY(1rem)';
+                        label.style.color = '#e8e8e8';
+                    });
+                }, function(error) {
+                    showToast(`Failed to send request. Please try again later.`);
+                }).finally(function() {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                });
         });
 
         document.querySelectorAll('.input').forEach(input => {
@@ -2284,6 +2366,11 @@
                 label.style.transform = 'translateY(1rem)';
                 label.style.color = '#e8e8e8';
             });
+
+            // Initialize EmailJS with your Public Key from your EmailJS account.
+            // 1. Go to EmailJS.com -> Account
+            // 2. Copy your Public Key and paste it here.
+            emailjs.init("YOUR_PUBLIC_KEY");
 
             lucide.createIcons();
 
